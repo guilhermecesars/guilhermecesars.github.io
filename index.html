@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="gui001.ico" type="image/x-icon">
-  <title>Guilherme Cesar - Developer</title>
+  <title>Guilherme Cesar - Futuro Developer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,12 +12,26 @@
       background: #f5f5f5;
       color: #333;
     }
+
     header {
       background: #1a3d7c;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 0;
     }
+
+    header .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    header h1 {
+      margin: 0;
+      padding: 20px 0;
+      font-size: 28px;
+    }
+
     main {
       max-width: 800px;
       margin: 40px auto;
@@ -27,25 +41,41 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-    h1 { color: #1a3d7c; }
+
+    img.foto {
+      width: 200px;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 8px; /* leve arredondamento, mas não oval */
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
     p {
       line-height: 1.6;
       text-align: justify;
       margin: 20px 0;
     }
-    img {
-      border-radius: 50%;
-      margin: 20px 0;
+
+    h2 {
+      color: #1a3d7c;
+      margin-top: 30px;
     }
-    h2 { color: #1a3d7c; margin-top: 30px; }
+
+    h3 {
+      color: #1a3d7c;
+      margin-bottom: 10px;
+    }
+
     ul {
-      list-style: none;   /* remove bolinhas */
+      list-style: none;
       padding: 0;
       margin: 20px 0;
     }
+
     li {
       margin: 10px 0;
     }
+
     li a {
       display: inline-block;
       padding: 10px 20px;
@@ -55,9 +85,11 @@
       border-radius: 5px;
       transition: background 0.3s;
     }
+
     li a:hover {
-      background: #163366; /* cor mais escura no hover */
+      background: #163366;
     }
+
     footer {
       background: #1a3d7c;
       color: white;
@@ -69,11 +101,12 @@
 </head>
 <body>
   <header>
+    <img src="banner001.png" alt="Banner tribal" class="banner">
     <h1>Bem-vindo ao site do Gui!!!</h1>
   </header>
 
   <main>
-    <img src="imagemM.png" alt="Foto" width="120">
+    <img src="imagemM.png" alt="Foto do Guilherme" class="foto">
     <p>
       Um cara de 42 anos, pai e marido, que decidiu voltar a estudar e se encontrar em uma área que não promete nada fácil, mas entrega tudo que ele precisa: desafio, propósito, e uma sensação boa de estar no caminho certo — mesmo quando o caminho é cheio de curvas.
     </p>
