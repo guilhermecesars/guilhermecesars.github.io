@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 2</title>
+    <link rel="short icon"  href="gui001.ico" type="image/x-icon">
+    <title>Midias em HTML5</title>
 </head>
 <body>
-    <p>&#128952;Um<br>&#128952;&#128952;Dois<br>&#128952;&#128952;&#128952;Três<br>&#128952;&#128952;&#128952;&#128952;Quatro</p>
-    <p>&#128952;&#128952;&#128952;&#128952;Quatro<br>&#128952;&#128952;&#128952;Três<br>&#128952;&#128952;Dois<br>&#128952;Um</p>
-    <!--Comentário-->
-    <p>Você pode escrever um parágrafo de qualquer jeito. Basta colocar tudo no meio do par de tags &lt;p&gt; e &lt;/p&gt;</p>
-    <p>Se precisar quebrar o texto em um lugar específico <br> como esse, você pode usar <br>&lt;br&gt; </p>
-    <p>&#128512;&#128952;<br>&#x2764;&#xFE0F;&#x200D;&#x1F525;
-    </p>
-    <p>Vamos adicionar alguns símbolos e emojis:<br>
-        &#128512; &#128513; &#128514; &#128515; &#128516; &#128517; &#128518; &#128519; &#128520; &#128521;<br>
-        &#128522; &#128523; &#128524; &#128525; &#128526; &#128527; &#128528; &#128529; &#128530; &#128531;<br>
-        &#128532; &#128533; &#128534; &#128535; &#128536; &#128537; &#128538; &#128539; &#128540; &#128541;<br>
-        &#129296; &#129297; &#129298; &#129299; &#x1F596;&#x1F595; <br>
-        &reg; &euro; &copy; &trade; &pound; &yen; &sect; &deg; &plusmn; &micro; &para; &middot; &divide;<br>
-        &lt; &gt; &amp; &quot; &apos; &cent;&#8364; &curren; &brvbar; &uml; &ordf; &ordm; &laquo; &raquo; &iquest; &iexcl; &times;<br>
-        &ndash; &mdash; &lsquo; &rsquo; &sbquo;&ldquo; &rdquo; &bdquo; &dagger; &Dagger; &permil; &lsaquo; &rsaquo; &oline; &frasl; &euro;<br>
-        &fnof; &Alpha; &Beta; &Gamma; &Delta; &Epsilon; &Zeta; &Eta; &Theta; &Iota; &Kappa; &Lambda; &Mu; &Nu; &Xi; &Omicron; &Pi; &Rho;<br>
-        &Sigma; &Tau; &Upsilon; &Phi; &Chi; &Psi; &Omega; &alpha; &beta; &gamma; &delta; &epsilon; &zeta; &eta; &theta; &iota; &kappa; &lambda; &mu; &nu; &xi;<br>
-        &omicron; &pi; &rho; &sigmaf; &sigma; &tau; &upsilon; &phi; &chi; &psi; &omega; &thetasym; &upsih; &piv;</p>
-
-</body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/foto_p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/foto_m.png" type="image/png">
+        <img src="imagens/foto_g.png" alt="Imagem flexivel">
+    </picture>
+   </body>
 </html>
