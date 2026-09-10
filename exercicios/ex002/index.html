@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="short icon"  href="../../gui001.ico">
+    <meta name="description" content="Exercício de mídia responsiva em HTML5 de Guilherme Cesar.">
+    <link rel="icon" href="../../gui001.ico">
     <title>Midias em HTML5</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     <header>
         <img src="../../banner003.png" alt="Banner tribal" class="banner">
+        <nav>
+            <a href="../../index.html">Início</a>
+            <a href="../../index2.html">Etapas</a>
+        </nav>
     </header>
-    <h1>Imagem dinâmica</h1>
-    <p>Se estiver em um pc ou notebook aumente e diminua o tamanho do seu navegador!</p>
-    <p>Se estiver em um celular experimente colocar ele na posição horizontal!</p>
-    <a href="../../index2.html" rel="prev" target="self"><h3>Voltar a pagina anterior</h3></a>
-    <picture>
-        <source media="(max-width:750px)" srcset="foto_p.png" type="image/png">
-        <source media="(max-width:1050px)" srcset="foto_m.png" type="image/png">
-        <img src="foto_g.png" alt="Imagem flexivel">
-    </picture>
 
-     
-   </body>
+    <main>
+        <h1>Imagem dinâmica</h1>
+        <p>Se estiver em um pc ou notebook aumente e diminua o tamanho do seu navegador!</p>
+        <p>Se estiver em um celular experimente colocar ele na posição horizontal!</p>
+        <picture>
+            <source media="(max-width:750px)" srcset="foto_p.png" type="image/png">
+            <source media="(max-width:1050px)" srcset="foto_m.png" type="image/png">
+            <img src="foto_g.png" alt="Imagem flexivel">
+        </picture>
+        <a href="../../index2.html" class="voltar">Voltar para página anterior</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Guilherme Cesar</p>
+    </footer>
+</body>
 </html>
