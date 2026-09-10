@@ -3,31 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site pessoal de Guilherme Cesar, futuro desenvolvedor front-end compartilhando sua jornada de estudos.">
+  <meta name="description" content="Portfólio de Guilherme Cesar, desenvolvedor em transição de carreira, com projetos reais em Java, APIs e automação.">
   <link rel="icon" href="gui001.ico" type="image/x-icon">
-  <title>Guilherme Cesar - Futuro Developer</title>
+  <title>Guilherme Cesar — Desenvolvedor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="banner003.png" alt="Banner tribal" class="banner">
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="index2.html">Etapas</a>
-    </nav>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="logo">Guilherme Cesar</a>
+      <nav class="main-nav">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Bem-vindo ao site do Gui!!!</h1>
-    <img src="imagemM.png" alt="Foto do Guilherme" class="foto">
-    <p>
-      Um cara de 42 anos, pai e marido, que decidiu voltar a estudar e se encontrar em uma área que não promete nada fácil, mas entrega tudo que ele precisa: desafio, propósito, e uma sensação boa de estar no caminho certo — mesmo quando o caminho é cheio de curvas.
-    </p>
-    <a href="index2.html" class="voltar">Ver etapas do meu desenvolvimento</a>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Em transição de carreira</p>
+      <h1>Guilherme Cesar</h1>
+      <p class="lead">
+        Aos 42 anos, marido e pai, decidi migrar pra tecnologia — hoje cursando Análise e
+        Desenvolvimento de Sistemas na Descomplica. Não construo só exercícios de curso:
+        uso o que aprendo pra resolver problemas reais, do meu jeito, com as ferramentas
+        que fazem sentido pra cada caso.
+      </p>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Garimpeiro</h3>
+          <p class="status">Em desenvolvimento</p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">RapidAPI</span>
+            <span class="tag">Taobao</span>
+          </div>
+          <p>
+            Ferramenta que automatiza a busca por produtos chineses em alta pra revenda
+            no Brasil, integrando a API do Taobao.
+          </p>
+          <a class="case-link" href="projetos/garimpeiro.html">Ver case completo →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Atendimento automatizado via WhatsApp</h3>
+          <p class="status">Concluído</p>
+          <div class="tags">
+            <span class="tag">Typebot</span>
+            <span class="tag">WhatsApp</span>
+            <span class="tag">Automação</span>
+          </div>
+          <p>
+            Fluxo conversacional que conduz o cliente do pedido ao link de WhatsApp do
+            negócio, sem exigir integração paga com a API oficial da Meta.
+          </p>
+          <a class="case-link" href="projetos/typebot.html">Ver case completo →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Vamos conversar?</p>
+      <div class="contato-links">
+        <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
+        <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Guilherme Cesar</p>
+  <footer class="site-footer">
+    <div class="container">
+      <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
+      <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      <p>&copy; 2026 Guilherme Cesar</p>
+    </div>
   </footer>
 </body>
 </html>

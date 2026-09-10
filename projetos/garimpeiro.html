@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case: Garimpeiro, ferramenta em Java que automatiza a pesquisa de produtos chineses em alta pra revenda no Brasil.">
+  <link rel="icon" href="../gui001.ico" type="image/x-icon">
+  <title>Garimpeiro — Guilherme Cesar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="../index.html" class="logo">Guilherme Cesar</a>
+      <nav class="main-nav">
+        <a href="../index.html">Início</a>
+        <a href="../sobre.html">Sobre</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html#projetos" class="breadcrumb">← Voltar para projetos</a>
+
+    <section class="case-header">
+      <h1>Garimpeiro</h1>
+      <p class="status">Em desenvolvimento</p>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">RapidAPI</span>
+        <span class="tag">Taobao</span>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">O problema</p>
+      <p>
+        Quem revende produtos importados precisa monitorar manualmente o que está em alta
+        no Taobao — um processo lento e repetitivo que consome tempo que poderia ir pra
+        atender clientes.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">A solução</p>
+      <p>
+        Uma ferramenta em Java que consulta a API do Taobao (via RapidAPI) e automatiza
+        essa pesquisa de tendências.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">Decisões técnicas</p>
+      <p>
+        Optei por Java pela familiaridade com a linguagem e por controle mais direto sobre
+        chamadas HTTP e estruturas de dados. O maior desafio atual é o gerenciamento de
+        cache e limites de quota da API — cada chamada tem custo, então a ferramenta
+        precisa decidir quando vale a pena buscar dados novos e quando reaproveitar
+        resultados recentes.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">Status e aprendizados</p>
+      <p>
+        Projeto em desenvolvimento ativo. Tem me ensinado bastante sobre estratégias de
+        cache, controle de rate limit e como projetar em torno das limitações de uma API
+        de terceiros — problemas que exercício de curso não ensina.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
+      <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      <p>&copy; 2026 Guilherme Cesar</p>
+    </div>
+  </footer>
+</body>
+</html>

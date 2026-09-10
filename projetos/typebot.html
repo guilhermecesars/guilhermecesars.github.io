@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case: fluxo de atendimento automatizado via WhatsApp construído com Typebot para pequenos negócios.">
+  <link rel="icon" href="../gui001.ico" type="image/x-icon">
+  <title>Atendimento via WhatsApp — Guilherme Cesar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="../index.html" class="logo">Guilherme Cesar</a>
+      <nav class="main-nav">
+        <a href="../index.html">Início</a>
+        <a href="../sobre.html">Sobre</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="../index.html#projetos" class="breadcrumb">← Voltar para projetos</a>
+
+    <section class="case-header">
+      <h1>Atendimento automatizado via WhatsApp</h1>
+      <p class="status">Concluído</p>
+      <div class="tags">
+        <span class="tag">Typebot</span>
+        <span class="tag">WhatsApp</span>
+        <span class="tag">Automação</span>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">O problema</p>
+      <p>
+        Pequenos negócios (tipo um restaurante) querem automatizar pedidos via WhatsApp,
+        mas a API oficial da Meta exige opt-in do cliente e processos de aprovação que são
+        complexos e caros pra quem está começando.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">A solução</p>
+      <p>
+        Construí, com Typebot, um fluxo conversacional que simula o atendimento de um
+        pequeno negócio: o cliente escolhe o item, o bot ramifica preços conforme a opção
+        escolhida, oferece adicionar mais itens, e ao final gera um link
+        <code>wa.me</code> pré-preenchido com o pedido — que abre o WhatsApp do dono do
+        negócio. Como é o cliente quem inicia a conversa, o fluxo funciona sem precisar da
+        aprovação da API Business da Meta.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">Decisões técnicas</p>
+      <p>
+        Escolhi Typebot por ser rápido de prototipar e testar fluxos de conversa sem
+        precisar montar um back-end próprio pra validar a ideia primeiro. A lógica de
+        ramificação de preços foi o ponto mais delicado — desenhar o fluxo pra cobrir as
+        combinações reais de pedido sem virar um labirinto de perguntas.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <p class="case-label">Além do projeto</p>
+      <p>
+        Escrevi um e-book ensinando o processo passo a passo, pra quem quiser replicar
+        esse tipo de automação no próprio negócio.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
+      <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      <p>&copy; 2026 Guilherme Cesar</p>
+    </div>
+  </footer>
+</body>
+</html>
