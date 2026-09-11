@@ -255,6 +255,22 @@ section > h2 {
   margin: 0 0 16px;
 }
 
+.case-cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  margin: 4px 0 12px;
+}
+
+.case-cta:hover,
+.case-cta:focus-visible {
+  background: #0ea371;
+}
+
 .case-section {
   margin: 32px 0;
 }

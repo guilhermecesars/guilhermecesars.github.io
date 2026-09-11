@@ -32,6 +32,14 @@
         <span class="tag">Taobao</span>
         <span class="tag">Cálculo de Importação</span>
       </div>
+      <p>
+        <a href="https://agente-garimpeiro.onrender.com" target="_blank" rel="noopener" class="case-cta">Acessar o programa →</a>
+      </p>
+      <p class="status">
+        💳 Cadastro e "assinatura" são simulados — nenhum pagamento real é cobrado, é só uma
+        demonstração do fluxo. Por rodar em hospedagem gratuita, o primeiro acesso pode levar
+        de 30 a 50 segundos pra "acordar" o servidor.
+      </p>
     </section>
 
     <section class="case-section">
@@ -68,8 +76,9 @@
         caso de erro de rede, nunca quando a API responde 429 (cota estourada), pra não
         desperdiçar chamadas à toa. Quando a cota esgota mesmo assim, um fallback com dados
         de exemplo assume a resposta, pra manter a experiência utilizável em vez de quebrar
-        a tela. Também adicionei uma camada simples de autenticação por chave de acesso, o
-        que deu ao projeto uma cara mais próxima de um produto do que de um script.
+        a tela. Também adicionei cadastro, login e um checkout simulado (sem gateway de
+        pagamento real) que emite um token de acesso por usuário — o que deu ao projeto uma
+        cara mais próxima de um produto SaaS do que de um script.
       </p>
     </section>
 
