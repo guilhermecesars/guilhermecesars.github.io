@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') fecharMenu();
   });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('open')) return;
+    if (nav.contains(e.target) || toggle.contains(e.target)) return;
+    fecharMenu();
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
