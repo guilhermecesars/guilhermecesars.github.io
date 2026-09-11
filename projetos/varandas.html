@@ -28,12 +28,43 @@
 
     <section class="case-header">
       <h1>Sistema Varandas</h1>
-      <p class="status">Em uso real</p>
+      <p class="status">Pronto — aguardando teste piloto</p>
       <div class="tags">
         <span class="tag">Java</span>
         <span class="tag">JavaFX</span>
         <span class="tag">SQLite</span>
         <span class="tag">Impressão Térmica</span>
+      </div>
+    </section>
+
+    <section class="case-section reveal">
+      <p class="case-label">Capturas de tela</p>
+      <div class="carousel">
+        <div class="carousel-track">
+          <figure class="carousel-slide">
+            <img src="varandas/tela-inicial.jpg" alt="Tela inicial do Sistema Varandas, com os botões Novo Pedido, Relatório do Dia e Sair">
+            <figcaption>Tela inicial</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="varandas/tela-novo-pedido.jpg" alt="Tela de novo pedido, com o cardápio do restaurante e o resumo do pedido em branco">
+            <figcaption>Novo pedido — cardápio e resumo</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="varandas/tela-pedido-preenchido.jpg" alt="Pedido montado com itens, total calculado e forma de pagamento selecionada">
+            <figcaption>Pedido montado, com total e pagamento</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="varandas/tela-pedido-salvo.jpg" alt="Mensagem de confirmação: pedido salvo com sucesso">
+            <figcaption>Confirmação de pedido salvo</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="varandas/tela-relatorio.jpg" alt="Relatório do dia com totais por forma de pagamento e lista de pedidos">
+            <figcaption>Relatório do dia</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="carousel-btn carousel-prev" aria-label="Slide anterior">‹</button>
+        <button type="button" class="carousel-btn carousel-next" aria-label="Próximo slide">›</button>
+        <div class="carousel-dots"></div>
       </div>
     </section>
 
@@ -67,19 +98,21 @@
         interface gráfica em JavaFX. A parte mais delicada foi a impressão térmica — enviar
         os comandos ESC/POS certos pra impressora se comportar como num sistema de PDV
         comercial. No fim, empacotei tudo com Maven Shade e <code>jpackage</code> num
-        instalador Windows com o runtime Java embutido, pra o dono do restaurante instalar
-        sem precisar saber o que é Java.
+        instalador Windows com o runtime Java embutido, pensando em facilitar a instalação
+        pra quem não sabe o que é Java.
       </p>
     </section>
 
     <section class="case-section reveal">
       <p class="case-label">Status e aprendizados</p>
       <p>
-        Esse projeto não ficou só no ambiente de teste — testei e ajustei com o restaurante
-        de verdade, o que trouxe problemas que nenhum exercício de curso ensina: fila de
-        impressão falhando, erro de digitação do cliente, interface precisando ser óbvia
-        pra quem não é técnico. Foi o projeto que mais me ensinou sobre a diferença entre
-        "funciona no meu computador" e "funciona pro usuário real".
+        O sistema está pronto e empacotado, mas ainda não passou por um teste real na
+        cozinha do Varandas — esse é o próximo passo. Até aqui, os maiores aprendizados
+        foram técnicos: integrar a impressora térmica via ESC/POS e empacotar tudo num
+        instalador que qualquer pessoa consegue instalar sozinha, sem saber nada de Java.
+        Isso me tirou da lógica pura de programação e me fez pensar em como um usuário
+        não-técnico vai de fato usar isso no dia a dia — o teste real vai mostrar o quanto
+        essa previsão se sustenta.
       </p>
     </section>
   </main>
