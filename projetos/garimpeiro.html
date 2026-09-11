@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Case: Garimpeiro, ferramenta em Java que automatiza a pesquisa de produtos chineses em alta pra revenda no Brasil.">
+  <meta name="description" content="Case: Garimpeiro, app em Java que automatiza a pesquisa de produtos chineses em alta e calcula a viabilidade de importar e revender no Brasil.">
   <link rel="icon" href="../gui001.ico" type="image/x-icon">
   <title>Garimpeiro — Guilherme Cesar</title>
   <link rel="stylesheet" href="../style.css">
@@ -30,6 +30,7 @@
         <span class="tag">Java</span>
         <span class="tag">RapidAPI</span>
         <span class="tag">Taobao</span>
+        <span class="tag">Cálculo de Importação</span>
       </div>
     </section>
 
@@ -38,15 +39,22 @@
       <p>
         Quem revende produtos importados precisa monitorar manualmente o que está em alta
         no Taobao — um processo lento e repetitivo que consome tempo que poderia ir pra
-        atender clientes.
+        atender clientes. E mesmo achando um produto em alta, ainda falta saber se ele
+        realmente vale a pena depois de imposto, frete e taxa de marketplace.
       </p>
     </section>
 
     <section class="case-section">
       <p class="case-label">A solução</p>
       <p>
-        Uma ferramenta em Java que consulta a API do Taobao (via RapidAPI) e automatiza
-        essa pesquisa de tendências.
+        Uma aplicação web com backend em Java que consulta a API do Taobao (via RapidAPI),
+        traduz automaticamente o termo de busca pra chinês e os títulos dos produtos de
+        volta pra português. Pra cada produto encontrado, o frontend calcula na hora a
+        simulação de importação pro Brasil — Imposto de Importação, ICMS, frete estimado,
+        custo total desembarcado, preço de venda sugerido no Mercado Livre/Shopee (já
+        descontando taxa de marketplace) e o lucro líquido estimado por unidade. A ideia é
+        transformar uma lista de produtos em alta numa lista de oportunidades já filtradas
+        pela viabilidade real do negócio.
       </p>
     </section>
 
@@ -54,10 +62,14 @@
       <p class="case-label">Decisões técnicas</p>
       <p>
         Optei por Java pela familiaridade com a linguagem e por controle mais direto sobre
-        chamadas HTTP e estruturas de dados. O maior desafio atual é o gerenciamento de
-        cache e limites de quota da API — cada chamada tem custo, então a ferramenta
-        precisa decidir quando vale a pena buscar dados novos e quando reaproveitar
-        resultados recentes.
+        chamadas HTTP e estruturas de dados. O maior desafio foi o gerenciamento de cache e
+        limites de quota da API — cada chamada tem custo, então implementei um cache em
+        memória com expiração de 6 horas e uma lógica de retry que insiste de novo só em
+        caso de erro de rede, nunca quando a API responde 429 (cota estourada), pra não
+        desperdiçar chamadas à toa. Quando a cota esgota mesmo assim, um fallback com dados
+        de exemplo assume a resposta, pra manter a experiência utilizável em vez de quebrar
+        a tela. Também adicionei uma camada simples de autenticação por chave de acesso, o
+        que deu ao projeto uma cara mais próxima de um produto do que de um script.
       </p>
     </section>
 
@@ -65,8 +77,10 @@
       <p class="case-label">Status e aprendizados</p>
       <p>
         Projeto em desenvolvimento ativo. Tem me ensinado bastante sobre estratégias de
-        cache, controle de rate limit e como projetar em torno das limitações de uma API
-        de terceiros — problemas que exercício de curso não ensina.
+        cache, controle de rate limit, design de fallback pra manter resiliência quando uma
+        API de terceiros falha, e sobre como pensar em produto (autenticação, experiência do
+        usuário) além da lógica pura de automação — problemas que exercício de curso não
+        ensina.
       </p>
     </section>
   </main>
