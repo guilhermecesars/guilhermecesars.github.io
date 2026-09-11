@@ -11,7 +11,10 @@
 <body>
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="logo">Guilherme Cesar</a>
+      <a href="index.html" class="logo">
+        <span class="logo-mark">GC</span>
+        <span class="logo-text">Guilherme Cesar</span>
+      </a>
       <nav class="main-nav">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
@@ -26,16 +29,24 @@
       <h1>Guilherme Cesar</h1>
       <p class="lead">
         Aos 42 anos, marido e pai, decidi migrar pra tecnologia — hoje cursando Análise e
-        Desenvolvimento de Sistemas na Descomplica. Não construo só exercícios de curso:
-        uso o que aprendo pra resolver problemas reais, do meu jeito, com as ferramentas
-        que fazem sentido pra cada caso.
+        Desenvolvimento de Sistemas. Não construo só exercícios de curso: uso o que aprendo
+        pra resolver problemas reais, do meu jeito, com as ferramentas que fazem sentido
+        pra cada caso.
+      </p>
+      <p class="hero-cta">
+        <a href="#projetos" class="btn-primary">Ver projetos ↓</a>
       </p>
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="projetos-destaque">
+      <p class="eyebrow">Em destaque</p>
       <h2>Projetos</h2>
+      <p class="section-intro">
+        Não são exercícios de curso — são ferramentas reais, no ar, prontas pra você testar
+        agora mesmo.
+      </p>
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card reveal">
           <h3>Garimpeiro</h3>
           <p class="status">Em desenvolvimento</p>
           <div class="tags">
@@ -47,10 +58,13 @@
             App que automatiza a busca por produtos chineses em alta e calcula na hora a
             viabilidade de importar e revender no Brasil (impostos, frete e lucro estimado).
           </p>
-          <a class="case-link" href="projetos/garimpeiro.html">Ver case completo →</a>
+          <div class="card-actions">
+            <a href="https://agente-garimpeiro.onrender.com" target="_blank" rel="noopener" class="btn-primary">Testar agora →</a>
+            <a href="projetos/garimpeiro.html" class="btn-secondary">Ver case completo</a>
+          </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card reveal">
           <h3>Atendimento automatizado via WhatsApp</h3>
           <p class="status">Concluído</p>
           <div class="tags">
@@ -62,17 +76,26 @@
             Fluxo conversacional que conduz o cliente do pedido ao link de WhatsApp do
             negócio, sem exigir integração paga com a API oficial da Meta.
           </p>
-          <a class="case-link" href="projetos/typebot.html">Ver case completo →</a>
+          <div class="card-actions">
+            <a href="https://typebot.co/my-typebot-2c72x94" target="_blank" rel="noopener" class="btn-primary">Testar agora →</a>
+            <a href="projetos/typebot.html" class="btn-secondary">Ver case completo</a>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="contato">
-      <h2>Contato</h2>
-      <p>Vamos conversar?</p>
-      <div class="contato-links">
-        <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
-        <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      <div class="contato-card reveal">
+        <p class="eyebrow">Vamos construir algo juntos?</p>
+        <h2>Bora conversar</h2>
+        <p class="section-intro">
+          Se você tem um problema real pra resolver — ou só quer trocar uma ideia sobre
+          tecnologia — me chama.
+        </p>
+        <div class="contato-links">
+          <a href="mailto:guyoko@gmail.com" class="btn-primary">✉️ guyoko@gmail.com</a>
+          <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener" class="btn-secondary">GitHub →</a>
+        </div>
       </div>
     </section>
   </main>
@@ -84,5 +107,7 @@
       <p>&copy; 2026 Guilherme Cesar</p>
     </div>
   </footer>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
