@@ -605,16 +605,10 @@ section > h2 {
 
   .main-nav {
     display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
+    flex: 0 0 100%;
     flex-direction: column;
     gap: 4px;
-    background: var(--bg-grad-start);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 24px 20px;
-    box-shadow: 0 16px 24px -16px rgba(0, 0, 0, 0.6);
+    padding: 8px 0 4px;
   }
 
   .main-nav.open {
