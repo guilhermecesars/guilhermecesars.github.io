@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currículo de Guilherme Cesar, desenvolvedor em formação (Java, JavaFX, SQLite, JavaScript). Aberto a estágio e vaga júnior.">
+  <meta property="og:title" content="Currículo — Guilherme Cesar">
+  <meta property="og:description" content="Desenvolvedor em formação, aberto a estágio e vaga júnior.">
+  <meta property="og:url" content="https://guilhermecesars.github.io/curriculo.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="gui001.ico" type="image/x-icon">
+  <title>Currículo — Guilherme Cesar</title>
+  <meta name="theme-color" content="#08070f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="trail" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a href="index.html" class="logo" aria-label="Guilherme Cesar — Início"><span class="dot"></span>guilherme<span class="grad">.dev</span></a>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <a href="index.html#projetos">Projetos</a>
+        <a href="index.html#trajetoria">Trajetória</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="curriculo.html">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container cv" id="main">
+    <a href="index.html" class="breadcrumb no-print">← Voltar</a>
+    <div class="cv-actions no-print">
+      <button type="button" class="case-cta" id="printCv">⬇ Baixar PDF <span class="arrow">→</span></button>
+      <span class="cv-hint">Na janela que abrir, escolha “Salvar como PDF”.</span>
+    </div>
+
+    <article class="cv-sheet">
+      <header class="cv-head">
+        <h1>Guilherme Cesar</h1>
+        <p class="cv-role">Desenvolvedor em formação · Java · Automação</p>
+        <p class="cv-contact">guyoko@gmail.com · github.com/guilhermecesars · guilhermecesars.github.io</p>
+      </header>
+
+      <section>
+        <h2>Objetivo</h2>
+        <p>Primeira oportunidade como desenvolvedor (estágio ou vaga júnior), para crescer em um time construindo software que resolve problemas reais.</p>
+      </section>
+
+      <section>
+        <h2>Formação</h2>
+        <p><strong>Análise e Desenvolvimento de Sistemas</strong> — em andamento.</p>
+      </section>
+
+      <section>
+        <h2>Projetos</h2>
+        <ul>
+          <li><strong>Agente Garimpeiro</strong> — aplicação Java com servidor HTTP próprio, integração com API externa (RapidAPI), cache em memória, tratamento de limite de cota, front-end web e deploy em Docker. Calcula a viabilidade de importar e revender produtos.</li>
+          <li><strong>Sistema Varandas</strong> — sistema desktop de pedidos para restaurante em Java (JavaFX + SQLite), organizado em camadas, com relatórios, formas de pagamento e impressão térmica (ESC/POS); empacotado com Maven em instalador Windows.</li>
+          <li><strong>GCs Enterprise</strong> — site e empresa de software: automação de atendimento via WhatsApp (Typebot) e sistemas sob medida.</li>
+          <li><strong>E-book “Faça seu Bot de Vendas”</strong> — guia de 35 capítulos sobre criar um atendente automático no WhatsApp sem programar.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tecnologias</h2>
+        <p>Java · JavaFX · SQLite · JavaScript · HTML/CSS · APIs REST · Docker · Git · Maven · Typebot</p>
+      </section>
+
+      <section>
+        <h2>Sobre mim</h2>
+        <p>Mais de 30 anos de vivência com internet. Aos 42 anos migrei para a tecnologia e aprendo construindo: cada projeto nasce de um problema real e vai para o ar.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="container">
+      <a href="mailto:guyoko@gmail.com">guyoko@gmail.com</a>
+      <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener">GitHub</a>
+      <p>&copy; 2026 Guilherme Cesar</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+  <script>document.getElementById('printCv').addEventListener('click',function(){window.print();});</script>
+</body>
+</html>
