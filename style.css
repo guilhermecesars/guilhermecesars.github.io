@@ -318,3 +318,9 @@ main.container > .hero { min-height: 0; display: block; padding: 0 0 26px; }
   .cv-head h1 { background: none; -webkit-text-fill-color: #111; color: #111; }
   .cv-role { color: #333; } .cv-sheet h2 { color: #555; border-color: #ccc; }
 }
+
+.cv-tech { color: var(--muted); font-size: 0.85em; }
+.cv-contact a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.cv-contact a:hover { color: var(--pink); }
+@media print { .cv-tech, .cv-contact a { color: #555 !important; } .cv-sheet li { break-inside: avoid; } }
+@media print { .cv-sheet { font-size: 9.6pt; line-height: 1.38; } .cv-head h1 { font-size: 22pt; } .cv-role { font-size: 11pt; } .cv-sheet li { margin-bottom: 5px; } .cv-sheet h2 { margin: 14px 0 6px; } }
