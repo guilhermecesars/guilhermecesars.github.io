@@ -295,3 +295,26 @@ main.container > .hero { min-height: 0; display: block; padding: 0 0 26px; }
 }
 
 .name .ch.ready { animation: none; opacity: 1; transform: none; transition: transform 0.28s var(--ease); }
+
+/* curriculo */
+.cv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 26px; }
+.cv-actions .case-cta { border: 0; cursor: pointer; font-family: var(--body); font-size: 0.97rem; }
+.cv-hint { color: var(--muted); font-size: 0.85rem; }
+.cv-sheet { padding: clamp(24px, 5vw, 56px); border-radius: 24px; background: var(--card); border: 1px solid var(--line); }
+.cv-head h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin-bottom: 8px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.06em; }
+.cv-role { font-family: var(--display); font-weight: 700; color: var(--white); font-size: 1.15rem; margin: 0 0 6px; }
+.cv-contact { color: var(--muted); font-size: 0.92rem; margin-bottom: 28px; }
+.cv-sheet h2 { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin: 26px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.cv-sheet ul { margin: 0; padding-left: 20px; } .cv-sheet li { margin-bottom: 10px; }
+.cv-sheet strong { color: var(--white); }
+@media print {
+  @page { margin: 16mm; }
+  .no-print, .mesh, #trail, .progress, .site-header, .skip, body::after { display: none !important; }
+  body, main { background: #fff !important; color: #111 !important; overflow: visible; }
+  main.container { padding: 0 !important; max-width: none; }
+  .cv-sheet { border: 0; background: none; padding: 0; }
+  .cv-sheet, .cv-sheet p, .cv-sheet li, .cv-contact { color: #111 !important; }
+  .cv-sheet strong { color: #000 !important; }
+  .cv-head h1 { background: none; -webkit-text-fill-color: #111; color: #111; }
+  .cv-role { color: #333; } .cv-sheet h2 { color: #555; border-color: #ccc; }
+}
