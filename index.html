@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070f">
   <meta name="description" content="Portfólio de Guilherme Cesar, desenvolvedor, com projetos reais em Java, APIs e automação.">
   <meta property="og:title" content="Guilherme Cesar — Desenvolvedor">
   <meta property="og:description" content="Projetos reais em Java, APIs e automação — não são exercícios de curso.">
@@ -10,90 +11,230 @@
   <meta property="og:type" content="website">
   <link rel="icon" href="gui001.ico" type="image/x-icon">
   <title>Guilherme Cesar — Desenvolvedor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="trail" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <div class="container nav-bar">
-      <a href="index.html" class="logo">Guilherme Cesar</a>
-      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html">Início</a>
+    <div class="nav-bar">
+      <a href="index.html" class="logo" aria-label="Guilherme Cesar — Início"><span class="dot"></span>guilherme<span class="grad">.dev</span></a>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#stack">Stack</a>
         <a href="sobre.html">Sobre</a>
         <a href="#contato">Contato</a>
       </nav>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
+  <main id="main">
     <section class="hero">
-      <h1>Projetos que resolvem problemas reais</h1>
-      <p class="lead">
-        Aos 42 anos, decidi migrar pra tecnologia — hoje cursando Análise e
-        Desenvolvimento de Sistemas. Não construo só exercícios de curso: aqui você
-        encontra ferramentas reais que fiz enquanto aprendia, resolvendo problemas de
-        verdade.
-      </p>
-      <p class="hero-cta">
-        <a href="#projetos" class="btn-primary">Ver projetos ↓</a>
-      </p>
+      <div class="container">
+        <p class="status-pill"><i></i>Aberto a estágio / vaga júnior</p>
+        <h1 class="name" aria-label="Guilherme Cesar">
+          <span class="row first">Guilherme</span>
+          <span class="row second">Cesar</span>
+        </h1>
+        <div class="hero-sub">
+          <div>
+            <p class="hero-role" aria-live="off"><span class="txt" data-roles="Desenvolvedor Java|Construtor de automações|Empreendedor|Eterno aprendiz">Desenvolvedor Java</span><span class="cursor"></span></p>
+            <p class="hero-lead">Aos 42 anos migrei pra tecnologia. Não construo só exercícios de curso: aqui estão ferramentas reais, no ar, que fiz enquanto aprendia.</p>
+          </div>
+          <div class="hero-cta">
+            <a href="#projetos" class="btn btn-primary">Ver projetos <span class="arrow">↓</span></a>
+            <a href="#contato" class="btn btn-ghost">Vamos conversar</a>
+          </div>
+        </div>
+      </div>
+      <span class="scroll-cue" aria-hidden="true">SCROLL</span>
     </section>
 
-    <section id="projetos" class="projetos-destaque">
-      <p class="eyebrow">Em destaque</p>
-      <h2>Projetos</h2>
-      <p class="section-intro">
-        Não são exercícios de curso — são ferramentas reais, no ar, prontas pra você testar
-        agora mesmo.
-      </p>
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <h3>Garimpeiro</h3>
-          <p class="status">Em desenvolvimento</p>
-          <div class="tags">
-            <span class="tag">Java</span>
-            <span class="tag">RapidAPI</span>
-            <span class="tag">Taobao</span>
-          </div>
-          <p>
-            App que automatiza a busca por produtos chineses em alta e calcula na hora a
-            viabilidade de importar e revender no Brasil (impostos, frete e lucro estimado).
-          </p>
-          <div class="card-actions">
-            <a href="https://agente-garimpeiro.onrender.com" target="_blank" rel="noopener" class="btn-primary">Testar agora →</a>
-            <a href="projetos/garimpeiro.html" class="btn-secondary">Ver case completo</a>
-          </div>
-        </article>
+    <div class="big-ticker" aria-hidden="true">
+      <div class="marquee" data-speed="1.1" data-skew>
+        <div class="marquee-track"><div class="marquee-group">
+          <span>Java</span><i>✺</i><span>APIs</span><i>✺</i><span>Automação</span><i>✺</i><span>JavaFX</span><i>✺</i><span>SQLite</span><i>✺</i><span>Docker</span><i>✺</i><span>JavaScript</span><i>✺</i><span>Git</span><i>✺</i>
+        </div></div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Manifesto</p>
+        <p class="statement">Eu não espero estar "pronto" pra construir. <strong>Aprendo fazendo</strong>: cada projeto nasce de um problema real, vai pro ar, recebe feedback — e me ensina o que nenhum exercício ensina.</p>
       </div>
     </section>
 
-    <section id="gcs-enterprise">
-      <div class="contato-card reveal">
-        <p class="eyebrow">Meu lado empreendedor</p>
-        <h2>Conheça a GCs Enterprise</h2>
-        <p class="section-intro">
-          Além dos projetos técnicos que você vê aqui, também fundei uma empresa de
-          software — automação de atendimento via WhatsApp, sistemas sob medida e um
-          e-book ensinando o método. O Sistema Varandas e o fluxo de atendimento que
-          moravam neste portfólio agora vivem lá.
-        </p>
-        <a href="https://gcsenterprise.com.br" target="_blank" rel="noopener" class="btn-primary">Visitar gcsenterprise.com.br →</a>
+    <section id="projetos" class="projects">
+      <div class="container projects-head">
+        <p class="eyebrow reveal">Em destaque</p>
+        <h2 class="reveal">Projetos <span class="grad">no ar.</span></h2>
+        <p class="section-intro reveal">Role pra explorar — e brinque com a calculadora do Garimpeiro.</p>
+      </div>
+
+      <div class="hscroll">
+        <div class="hscroll-sticky">
+          <div class="hscroll-track">
+
+            <article class="p-card">
+              <div class="p-info">
+                <span class="p-num">01 / 04</span>
+                <h3>Garimpeiro</h3>
+                <div class="tags"><span class="tag">Java</span><span class="tag">RapidAPI</span><span class="tag">Docker</span><span class="tag">Em desenvolvimento</span></div>
+                <p>Automatiza a busca por produtos chineses em alta e calcula na hora a viabilidade de importar e revender no Brasil: impostos, frete e lucro estimado.</p>
+                <div class="p-actions">
+                  <a href="https://agente-garimpeiro.onrender.com" target="_blank" rel="noopener" class="btn btn-primary">Testar agora <span class="arrow">→</span></a>
+                  <a href="projetos/garimpeiro.html" class="btn btn-ghost">Case completo</a>
+                </div>
+              </div>
+              <div class="p-visual">
+                <div class="calc" aria-label="Simulador ilustrativo de viabilidade de importação">
+                  <div class="calc-title"><span>simulador</span><span>ilustrativo</span></div>
+                  <label for="c-custo">Custo do produto <b id="o-custo"></b></label>
+                  <input id="c-custo" type="range" min="10" max="300" value="60" step="5">
+                  <label for="c-frete">Frete estimado <b id="o-frete"></b></label>
+                  <input id="c-frete" type="range" min="0" max="120" value="25" step="5">
+                  <label for="c-venda">Preço de venda <b id="o-venda"></b></label>
+                  <input id="c-venda" type="range" min="40" max="900" value="320" step="10">
+                  <div class="calc-out">
+                    <div class="calc-row">Imposto (simulado) <b id="r-imp"></b></div>
+                    <div class="calc-row">Taxa marketplace <b id="r-taxa"></b></div>
+                    <div class="calc-row">Margem <b id="r-mg"></b></div>
+                    <div class="calc-profit"><em id="r-label" style="font-style:normal;font-size:.8rem;font-family:var(--body)"></em><span id="r-lucro"></span></div>
+                  </div>
+                  <p class="calc-note">Regras simplificadas só pra demonstrar. O app real calcula II, ICMS, frete e taxa de marketplace.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="p-card alt">
+              <div class="p-info">
+                <span class="p-num">02 / 04</span>
+                <h3>Sistema Varandas</h3>
+                <div class="tags"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">SQLite</span><span class="tag">ESC/POS</span></div>
+                <p>Sistema desktop de pedidos feito do zero pra um restaurante real: clientes, cardápio, pagamentos, relatório do dia e comprovante na impressora térmica.</p>
+                <div class="p-actions">
+                  <a href="https://gcsenterprise.com.br/servicos/sistema-varandas.html" target="_blank" rel="noopener" class="btn btn-primary">Ver o case <span class="arrow">→</span></a>
+                  <a href="https://github.com/guilhermecesars/sistema-varandas" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+                </div>
+              </div>
+              <div class="p-visual">
+                <div class="shots">
+                  <img src="assets/tela-novo-pedido.webp" alt="Tela de novo pedido do Sistema Varandas" width="897" height="730" loading="lazy">
+                  <img src="assets/tela-relatorio.webp" alt="Relatório do dia do Sistema Varandas" width="900" height="733" loading="lazy">
+                </div>
+              </div>
+            </article>
+
+            <article class="p-card warm">
+              <div class="p-info">
+                <span class="p-num">03 / 04</span>
+                <h3>GCs Enterprise</h3>
+                <div class="tags"><span class="tag">Empresa</span><span class="tag">Automação</span><span class="tag">WhatsApp</span></div>
+                <p>Minha empresa de software: automação de atendimento via WhatsApp e sistemas sob medida, testados em negócios reais. O site também é feito por mim.</p>
+                <div class="p-actions">
+                  <a href="https://gcsenterprise.com.br" target="_blank" rel="noopener" class="btn btn-primary">Visitar o site <span class="arrow">→</span></a>
+                </div>
+              </div>
+              <div class="p-visual"><span class="big-icon" aria-hidden="true">🚀</span></div>
+            </article>
+
+            <article class="p-card alt">
+              <div class="p-info">
+                <span class="p-num">04 / 04</span>
+                <h3>Bot de Vendas <small style="font-size:.5em;color:var(--muted)">e-book</small></h3>
+                <span class="price-chip">R$ 67</span>
+                <div class="tags"><span class="tag">Typebot</span><span class="tag">35 capítulos</span><span class="tag">Sem código</span></div>
+                <p>Escrevi o método completo pra quem nunca programou montar um atendente automático que recebe pedido e fecha a venda sozinho no WhatsApp.</p>
+                <div class="p-actions">
+                  <a href="https://gcsenterprise.com.br/produtos/ebook-bot-vendas.html" target="_blank" rel="noopener" class="btn btn-primary">Conhecer <span class="arrow">→</span></a>
+                </div>
+              </div>
+              <div class="p-visual"><span class="big-icon" aria-hidden="true">📘</span></div>
+            </article>
+
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contato">
-      <div class="contato-card reveal">
-        <p class="eyebrow">Vamos conversar?</p>
-        <h2>Contato</h2>
-        <p class="section-intro">
-          Se você tem uma oportunidade, um feedback ou só quer trocar uma ideia sobre
-          tecnologia, me chama.
-        </p>
-        <div class="contato-links">
-          <a href="mailto:guyoko@gmail.com" class="btn-primary">✉️ guyoko@gmail.com</a>
-          <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener" class="btn-secondary">GitHub →</a>
+    <div class="banner-strip" aria-hidden="true">
+      <div class="marquee" data-speed="0.7" data-dir="right">
+        <div class="marquee-track"><div class="marquee-group">
+          <img src="assets/banner.webp" alt="" width="800" height="199"><img src="assets/banner.webp" alt="" width="800" height="199"><img src="assets/banner.webp" alt="" width="800" height="199">
+        </div></div>
+      </div>
+    </div>
+
+    <section id="trajetoria" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Trajetória</p>
+        <h2 class="reveal">De "já passou da hora" <br>pra <span class="grad">hora de construir.</span></h2>
+        <div class="journey" style="margin-top:clamp(36px,5vw,70px)">
+          <div class="portrait reveal">
+            <div class="portrait-frame"><img src="assets/foto.webp" alt="Foto de Guilherme Cesar" width="550" height="731" loading="lazy"></div>
+            <span class="portrait-tag">42 anos. Zero desculpa.</span>
+          </div>
+          <div class="timeline">
+            <div class="t-item"><span class="t-when">Há mais de 30 anos</span><h3>Internet desde o começo</h3><p>Vi a web nascer, crescer e se reinventar várias vezes — sempre aprendendo a ferramenta nova antes de virar moda.</p></div>
+            <div class="t-item"><span class="t-when">Aos 42</span><h3>A virada</h3><p>Pai, marido e com uma carreira inteira nas costas, decidi começar Análise e Desenvolvimento de Sistemas. Lógica, JavaScript e as bases de verdade.</p></div>
+            <div class="t-item"><span class="t-when">Durante o curso</span><h3>Garimpeiro e Varandas</h3><p>Sem esperar o diploma: uma aplicação Java com API e deploy, e um sistema desktop usado como base pra um restaurante real.</p></div>
+            <div class="t-item"><span class="t-when">Em paralelo</span><h3>GCs Enterprise e e-book</h3><p>Fundei uma empresa de software e escrevi um e-book de 35 capítulos ensinando a montar um bot de vendas sem programar.</p></div>
+            <div class="t-item"><span class="t-when">Agora</span><h3>Procurando meu time</h3><p>Quero a primeira oportunidade — estágio ou júnior — pra crescer ao lado de gente melhor que eu. Que tal conversarmos?</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section" style="padding-top:0">
+      <div class="container term-wrap">
+        <div class="reveal">
+          <p class="eyebrow">Stack &amp; status</p>
+          <h2 style="font-size:clamp(2rem,4.6vw,3.6rem)">Caixa de <span class="grad">ferramentas.</span></h2>
+          <p class="section-intro">O que uso no dia a dia pra tirar ideia do papel.</p>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">JavaFX</span><span class="chip">SQLite</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span><span class="chip">APIs REST</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Maven</span><span class="chip">Typebot</span>
+          </div>
+        </div>
+        <div class="terminal reveal" style="--d:.15s">
+          <div class="term-bar"><i></i><i></i><i></i><span>guilherme@portfolio: ~</span></div>
+          <div class="term-body" aria-label="Resumo em formato de terminal"><span class="p">$</span> whoami
+guilherme_cesar
+
+<span class="p">$</span> cat perfil.json
+{
+  <span class="k">"formacao"</span>: <span class="v">"Análise e Desenvolvimento de Sistemas"</span>,
+  <span class="k">"web_desde"</span>: <span class="v">"30+ anos"</span>,
+  <span class="k">"stack"</span>: [<span class="v">"Java"</span>, <span class="v">"JavaFX"</span>, <span class="v">"SQLite"</span>, <span class="v">"JS"</span>],
+  <span class="k">"status"</span>: <span class="v">"aberto a estágio / júnior"</span>
+}
+
+<span class="p">$</span> ./proximo-passo.sh
+<span class="c">&gt; contratar o Guilherme ✨</span> <span class="caret"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact" style="padding-top:0">
+      <div class="container">
+        <p class="eyebrow reveal">Vamos conversar?</p>
+        <h2 class="reveal">Bora <span class="grad">construir</span><br>algo juntos.</h2>
+        <button type="button" class="mail-big reveal" data-mail="guyoko@gmail.com" aria-label="Copiar e-mail guyoko@gmail.com">guyoko@gmail.com</button>
+        <span class="copy-hint reveal">↑ clique pra copiar</span>
+        <div class="contact-links reveal">
+          <a href="mailto:guyoko@gmail.com" class="btn btn-primary">✉️ Enviar e-mail <span class="arrow">→</span></a>
+          <a href="https://github.com/guilhermecesars" target="_blank" rel="noopener" class="btn btn-ghost">GitHub <span class="arrow">↗</span></a>
+          <a href="https://gcsenterprise.com.br" target="_blank" rel="noopener" class="btn btn-ghost">GCs Enterprise <span class="arrow">↗</span></a>
         </div>
       </div>
     </section>

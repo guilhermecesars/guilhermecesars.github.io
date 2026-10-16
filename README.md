@@ -15,8 +15,20 @@ quem eu sou, no que trabalho e os projetos que desenvolvi.
 | `index.html`           | Página inicial                            |
 | `sobre.html`           | Página "Sobre"                            |
 | `projetos/`            | Páginas de cada projeto (ex.: Garimpeiro) |
-| `style.css`            | Estilos do site                           |
-| `scripts.js`           | Interações (menu, animações)              |
+| `style.css`            | Estilos do site (visual "Prisma")         |
+| `scripts.js`           | Interações (cursor, scroll horizontal, calculadora, confete) |
+| `assets/`              | Imagens otimizadas (WebP)                 |
+
+## Voltar ao design anterior
+
+O site antes da reformulação está preservado na branch
+`backup/pre-redesign-2026-10-16`. Para restaurar:
+
+```bash
+git checkout main
+git checkout backup/pre-redesign-2026-10-16 -- .
+git commit -am "Restaura design anterior" && git push
+```
 
 ## Rodar localmente
 
